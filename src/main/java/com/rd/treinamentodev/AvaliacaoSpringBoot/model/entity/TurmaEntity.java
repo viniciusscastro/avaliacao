@@ -27,10 +27,7 @@ public class TurmaEntity {
     private Date dtFinal;
 
     @ManyToMany
-    @JoinTable(
-            name = "TB_TURMA_INSTRUTOR",
-            joinColumns = @JoinColumn(name = "ID_TURMA"),
-            inverseJoinColumns = @JoinColumn(name = "ID_INSTRUTOR")
+    @JoinTable(name = "TB_TURMA_INSTRUTOR", joinColumns = @JoinColumn(name = "ID_TURMA"), inverseJoinColumns = @JoinColumn(name = "ID_INSTRUTOR")
     )
     private List<InstrutorEntity> instrutores;
 
